@@ -1,0 +1,35 @@
+1) Boot the Raspberry Pi from the microSD card with Raspberry Pi OS.
+
+2) Open Terminal in Raspberry Pi OS.
+
+3) Run the following commands:
+
+sudo apt update
+sudo apt full-upgrade
+sudo rpi-update
+sudo reboot
+
+sudo rpi-eeprom-update -a
+sudo reboot
+
+vcgencmd bootloader_version
+
+4) Open a terminal and run sudo raspi-config
+
+5) Select 6 Advanced Options, Select A6 Boot Order, Select B1, select OK, Reboot
+
+6) Shut down the Pi. Then unplug the microSD card.
+
+7) On your PC, flash the Custom image onto you choice of drive.
+
+8) Before you eject the boot volume, you need to replace some files on it from GitHub. If flasher software auto ejected the drive, unplug and plug it back in
+
+9) Go to the raspberrypi/firmware GitHub repository (https://github.com/raspberrypi/firmware) and download the zip or clone the project to your computer.
+
+10) Inside the boot folder, copy over all the files that end in .elf or .dat to the boot volume of your Custom drive.
+
+11) Eject the boot volume, and unplug the Custom drive.
+
+12) Plug your Custom drive into you RPi
+
+13) Power up the Pi.
